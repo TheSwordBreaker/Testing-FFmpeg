@@ -6,8 +6,8 @@
   "author": "Kunal Gupta",
   "license": "ISC",
   "scripts": {
-    "start": "npx pm2 stop app.js",
-    "stop": "npx pm2 stop app.js",
+    "start": "pm2 start app.js",
+    "stop": "pm2 stop app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert": "node --experimental-wasm-threads --experimental-wasm-bulk-memory .convert.js"
   },
