@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
   ffmpeg('video_answer.webm')
     .inputOptions(['-fflags', '+genpts', '-r', '24',])
-    .addOutput('test.mp4')
+    .addOutput('test.mkv')
     .on('start', (commandLine) => console.log('Spawned Ffmpeg with command: ' + commandLine))
     .on('progress', (progress) => console.log('Processing: ' + progress.currentKbps + 'kb done @ ' + progress.currentFps + ' fps'))
     .on('error', (err) => {
